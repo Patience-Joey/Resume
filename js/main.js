@@ -46,34 +46,17 @@ document.addEventListener('DOMContentLoaded', function () {
         ]
       },
       experience: {
-        title: '实习与项目经历',
+        title: '论文发表经历',
         items: [
           {
-            period: '2023.12 - 2024.08',
-            title: '算法实习生',
-            org: '常州先进技术研究所',
+            period: 'CVPR 2026',
+            title: 'C-LaV: Conditional Latent Velocity Field Denoising for Weather-Robust LiDAR Place Recognition',
+            org: '已被 CVPR 2026 接收',
             achievements: [
-              'Ubuntu20.04操作系统下利用ROS系统部署深度强化学习（TD3）算法',
-              '引入长短时记忆（LSTM）组件，优化了传统TD3算法。实验结果表明，改进后显著提升了求解效率和准确性',
-              '结合3D点云信息在Gazebo环境中进行目标感知与探索'
-            ]
-          },
-          {
-            period: '2024.01 - 2024.05',
-            title: '移动机器人对动态小目标行人的快速检测',
-            org: '项目负责人',
-            achievements: [
-              '针对YOLOv8存在Neck部分信息融合时效率低的问题，提出一种新的信息融合策略，同时引入Mixed local channel attention机制，实现了6%的Precison以及3%的mAP提升',
-              '通过Model Pruning与轻量化策略，使得模型在保持精度的前提下参数量下降约50%，实现在移动机器人平台对动态小目标行人的高精度检测'
-            ]
-          },
-          {
-            period: '2024.05 - 2024.08',
-            title: '采用多尺度动态优化策略的单阶段物体6D位姿估计算法',
-            org: '项目负责人',
-            achievements: [
-              '针对位姿估计任务，通过多个尺度的动态优化策略使得改进后的检测器可以在不显著增加计算量的情况下，提高检测精度和速度，在ADD-S精度指标上，本文算法最大提升达到了10.259%',
-              '通过使用Dynamic Snake Convolution动态调整卷积核的形状和位置，从而更好地捕捉目标的特征，同时引入动态采样器(Dysample)技术，旨在通过学习来进行上采样，优化检测效果'
+              '提出C-LaV框架，通过条件潜在速度场（Conditional Velocity Field）在BEV潜在空间中执行去噪，使LiDAR地点识别在雨、雪、雾等恶劣天气下保持鲁棒性',
+              '将单帧LiDAR点云投影为三通道鸟瞰图（BEV），利用冻结的DINOv2编码器提取语义特征，并通过基于Flow Matching的DiT去噪器在潜在空间中去除天气噪声',
+              '设计基于SALAD的潜在聚类描述子聚合头，通过Sinkhorn软聚类生成8448维全局描述子，并采用截断Smooth-AP损失优化检索性能',
+              '建立统一的恶劣天气基准协议，在KITTI、NCLT和Boreas数据集上全面超越现有方法，平均Recall@1达到75.82%，达到该领域最优水平'
             ]
           }
         ]
@@ -91,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
           },
           {
             name: '专业领域',
-            items: ['深度学习', '计算机视觉', '目标检测', '6D位姿估计', '强化学习']
+            items: ['深度学习', '计算机视觉', '三维感知', '点云地理定位', '扩散模型']
           }
         ]
       },
@@ -142,34 +125,17 @@ document.addEventListener('DOMContentLoaded', function () {
         ]
       },
       experience: {
-        title: 'Experience & Projects',
+        title: 'Publications',
         items: [
           {
-            period: 'Dec. 2023 - Aug. 2024',
-            title: 'Algorithm Intern',
-            org: 'Changzhou Institute of Advanced Technology',
+            period: 'CVPR 2026',
+            title: 'C-LaV: Conditional Latent Velocity Field Denoising for Weather-Robust LiDAR Place Recognition',
+            org: 'Accepted by CVPR 2026',
             achievements: [
-              'Deployed Deep Reinforcement Learning (TD3) algorithms using ROS system on Ubuntu 20.04',
-              'Integrated LSTM components to optimize traditional TD3 algorithms, significantly improving solution efficiency and accuracy',
-              'Combined 3D point cloud information for target perception and exploration in Gazebo environment'
-            ]
-          },
-          {
-            period: 'Jan. 2024 - May 2024',
-            title: 'Fast Detection of Dynamic Small Target Pedestrians for Mobile Robots',
-            org: 'Project Leader',
-            achievements: [
-              'Proposed a new information fusion strategy to address low efficiency in YOLOv8 Neck fusion, introduced Mixed Local Channel Attention mechanism, achieving 6% Precision and 3% mAP improvements',
-              'Applied Model Pruning and lightweight strategies, reducing model parameters by ~50% while maintaining accuracy for high-precision pedestrian detection on mobile robot platforms'
-            ]
-          },
-          {
-            period: 'May 2024 - Aug. 2024',
-            title: 'Single-stage 6D Object Pose Estimation with Multi-scale Dynamic Optimization',
-            org: 'Project Leader',
-            achievements: [
-              'Developed multi-scale dynamic optimization strategies for pose estimation, improving detection accuracy and speed without significant computational overhead, achieving maximum 10.259% improvement on ADD-S metric',
-              'Utilized Dynamic Snake Convolution to dynamically adjust kernel shapes and positions for better feature capture, integrated Dysample technology for learning-based upsampling optimization'
+              'Proposed C-LaV, a framework that performs latent-space denoising via a Conditional Velocity Field on BEV latents, enabling robust LiDAR place recognition under rain, snow, and fog',
+              'Projected single-sweep LiDAR point clouds into three-channel BEV images, encoded them with a frozen DINOv2 transformer, and removed weather corruption through a Flow-Matching-based DiT denoiser in latent space',
+              'Designed a SALAD-based Latent Clustering descriptor aggregation head using Sinkhorn soft clustering to produce 8448-D global descriptors, optimized with a truncated Smooth-AP loss',
+              'Established a unified adverse-weather benchmark protocol and achieved state-of-the-art results across KITTI, NCLT, and Boreas datasets with an average Recall@1 of 75.82%'
             ]
           }
         ]
@@ -187,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
           },
           {
             name: 'Expertise',
-            items: ['Deep Learning', 'Computer Vision', 'Object Detection', '6D Pose Estimation', 'Reinforcement Learning']
+            items: ['Deep Learning', 'Computer Vision', '3D Perception', 'Point Cloud Geo-localization', 'Diffusion Models']
           }
         ]
       },

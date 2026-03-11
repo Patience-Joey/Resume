@@ -22,7 +22,7 @@
     <!-- Header -->
     <header class="header">
       <div class="profile">
-        <img src="assets/img/avatar.png" alt="曹学伟" class="avatar">
+        <img src="assets/img/2026.jpg" alt="曹学伟" class="avatar">
         <div class="info">
           <h1 class="name">曹学伟</h1>
           <p class="title"> </p>
@@ -82,43 +82,20 @@
         </div>
       </section>
 
-      <!-- Experience -->
+      <!-- Publications -->
       <section class="section">
-        <h2>实习与项目经历</h2>
+        <h2>论文发表经历</h2>
         <div class="timeline">
           <div class="item">
-            <div class="period">2023.12 - 2024.08</div>
+            <div class="period">CVPR 2026</div>
             <div class="details">
-              <h3>算法实习生</h3>
-              <p class="org">常州先进技术研究所</p>
+              <h3>C-LaV: Conditional Latent Velocity Field Denoising for Weather-Robust LiDAR Place Recognition</h3>
+              <p class="org">已被 CVPR 2026 接收</p>
               <ul class="achievements">
-                <li>Ubuntu20.04操作系统下利用ROS系统部署深度强化学习（TD3）算法</li>
-                <li>引入长短时记忆（LSTM）组件，优化了传统TD3算法。实验结果表明，改进后显著提升了求解效率和准确性</li>
-                <li>结合3D点云信息在Gazebo环境中进行目标感知与探索</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="period">2024.01 - 2024.05</div>
-            <div class="details">
-              <h3>移动机器人对动态小目标行人的快速检测</h3>
-              <p class="org">项目负责人</p>
-              <ul class="achievements">
-                <li>针对YOLOv8存在Neck部分信息融合时效率低的问题，提出一种新的信息融合策略，同时引入Mixed local channel attention机制，实现了6%的Precison以及3%的mAP提升</li>
-                <li>通过Model Pruning与轻量化策略，使得模型在保持精度的前提下参数量下降约50%，实现在移动机器人平台对动态小目标行人的高精度检测</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="period">2024.05 - 2024.08</div>
-            <div class="details">
-              <h3>采用多尺度动态优化策略的单阶段物体6D位姿估计算法</h3>
-              <p class="org">项目负责人</p>
-              <ul class="achievements">
-                <li>针对位姿估计任务，通过多个尺度的动态优化策略使得改进后的检测器可以在不显著增加计算量的情况下，提高检测精度和速度，在ADD-S精度指标上，本文算法最大提升达到了10.259%</li>
-                <li>通过使用Dynamic Snake Convolution动态调整卷积核的形状和位置，从而更好地捕捉目标的特征，同时引入动态采样器(Dysample)技术，旨在通过学习来进行上采样，优化检测效果</li>
+                <li>提出C-LaV框架，通过条件潜在速度场（Conditional Velocity Field）在BEV潜在空间中执行去噪，使LiDAR地点识别在雨、雪、雾等恶劣天气下保持鲁棒性</li>
+                <li>将单帧LiDAR点云投影为三通道鸟瞰图（BEV），利用冻结的DINOv2编码器提取语义特征，并通过基于Flow Matching的DiT去噪器在潜在空间中去除天气噪声</li>
+                <li>设计基于SALAD的潜在聚类描述子聚合头，通过Sinkhorn软聚类生成8448维全局描述子，并采用截断Smooth-AP损失优化检索性能</li>
+                <li>建立统一的恶劣天气基准协议，在KITTI、NCLT和Boreas数据集上全面超越现有方法，平均Recall@1达到75.82%，达到该领域最优水平</li>
               </ul>
             </div>
           </div>
@@ -154,9 +131,9 @@
                 <div class="skill-list">
                   <span class="skill-tag">深度学习</span>
                   <span class="skill-tag">计算机视觉</span>
-                  <span class="skill-tag">目标检测</span>
-                  <span class="skill-tag">6D位姿估计</span>
-                  <span class="skill-tag">强化学习</span>
+                  <span class="skill-tag">三维感知</span>
+                  <span class="skill-tag">点云地理定位</span>
+                  <span class="skill-tag">扩散模型</span>
                 </div>
               </div>
             </div>
