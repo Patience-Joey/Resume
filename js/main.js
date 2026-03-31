@@ -515,6 +515,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
     
+    // Update visit counter label
+    const counterLabel = document.querySelector('.counter-label');
+    if (counterLabel) {
+      counterLabel.textContent = lang === 'zh' ? counterLabel.dataset.zh : counterLabel.dataset.en;
+    }
+
     // Update document title
     document.title = lang === 'zh' ? '曹学伟 - 个人简历' : 'Xuewei Cao - Resume';
   }
