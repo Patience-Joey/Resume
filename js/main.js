@@ -52,12 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
             period: 'CVPR 2026',
             title: 'C-LaV: Conditional Latent Velocity Field Denoising for Weather-Robust LiDAR Place Recognition',
             org: '已被 CVPR 2026 接收',
-            achievements: [
-              '提出C-LaV框架，通过条件潜在速度场（Conditional Velocity Field）在BEV潜在空间中执行去噪，使LiDAR地点识别在雨、雪、雾等恶劣天气下保持鲁棒性',
-              '将单帧LiDAR点云投影为三通道鸟瞰图（BEV），利用冻结的DINOv2编码器提取语义特征，并通过基于Flow Matching的DiT去噪器在潜在空间中去除天气噪声',
-              '设计基于SALAD的潜在聚类描述子聚合头，通过Sinkhorn软聚类生成8448维全局描述子，并采用截断Smooth-AP损失优化检索性能',
-              '建立统一的恶劣天气基准协议，在KITTI、NCLT和Boreas数据集上全面超越现有方法，平均Recall@1达到75.82%，达到该领域最优水平'
-            ]
+            achievements: []
           }
         ]
       },
@@ -131,12 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
             period: 'CVPR 2026',
             title: 'C-LaV: Conditional Latent Velocity Field Denoising for Weather-Robust LiDAR Place Recognition',
             org: 'Accepted by CVPR 2026',
-            achievements: [
-              'Proposed C-LaV, a framework that performs latent-space denoising via a Conditional Velocity Field on BEV latents, enabling robust LiDAR place recognition under rain, snow, and fog',
-              'Projected single-sweep LiDAR point clouds into three-channel BEV images, encoded them with a frozen DINOv2 transformer, and removed weather corruption through a Flow-Matching-based DiT denoiser in latent space',
-              'Designed a SALAD-based Latent Clustering descriptor aggregation head using Sinkhorn soft clustering to produce 8448-D global descriptors, optimized with a truncated Smooth-AP loss',
-              'Established a unified adverse-weather benchmark protocol and achieved state-of-the-art results across KITTI, NCLT, and Boreas datasets with an average Recall@1 of 75.82%'
-            ]
+            achievements: []
           }
         ]
       },
